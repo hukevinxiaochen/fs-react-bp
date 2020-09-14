@@ -1,3 +1,7 @@
+# Before you start
+
+If you use `npm` just be sure to delete the yarn.lock file prior to running your first `npm install`.
+
 # Features
 
 * `.eslintrc.js` - using airbnb config.
@@ -8,8 +12,8 @@
   * `babel-loader`
   * `@babel/preset-react`
 * runs on heroku dyno as long as a valid heroku remote is available
+  * uses a deploy script that will deploy to the heroku dyno with `yarn/npm deploy`
 * starts in production with `start` script
-* uses a deploy script
 
 # Usage
 
