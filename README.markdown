@@ -1,6 +1,11 @@
+## testing
 [] Write a test script for dev and for production
 [] Write tests
 [] Get test code to be run through babel
+
+## react
+[] Learn to use nodemon
+[] Learn to use webpack-dev-server
 
 # Notes to Fullstack
 
