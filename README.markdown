@@ -7,6 +7,9 @@
 * Bundles assets using `webpack` with a `webpack.config.js` file that works with react using
   * `babel-loader`
   * `@babel/preset-react`
+* runs on heroku dyno as long as a valid heroku remote is available
+* starts in production with `start` script
+* uses a deploy script
 
 # Usage
 
