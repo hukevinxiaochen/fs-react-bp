@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode production & http-server -p 80",
+    "start": "webpack --mode production & http-server -c-1",
     "start-dev": "webpack -w & yarn run start-static",
     "start-static": "http-server",
     "build": "webpack"
