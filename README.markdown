@@ -12,7 +12,7 @@
 
 * Build the react code and other front end assets `build`
 * Serve just the static assets in `./public` directory with `start-static`
-  * Navigate to `localhost:8080` in the browser and you should see whatever you would expect based on `public/index.html` and `client/app.jsx`.
+  * Navigate to `localhost:8080` in the browser and you should see whatever you would expect based on `public/index.html` and `client/app.jsx` (e.g. Hello there! by default).
 * You can test
 * You can serve just public assets and our index.html command line with the command `http-server`.
 
