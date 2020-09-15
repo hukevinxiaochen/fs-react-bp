@@ -14,6 +14,12 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 * runs on heroku dyno as long as a valid heroku remote is available
   * uses a deploy script that will deploy to the heroku dyno with `yarn/npm deploy`
 * starts in production with `start` script
+* can test the application by running `test` script
+  * uses mocha and chai, with enzyme for react
+
+## Not actually boilerplate
+
+* uses d3 to render some sample GeoJSON in the server folder
 
 # Usage
 
@@ -22,6 +28,10 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
   * Navigate to `localhost:8080` in the browser and you should see whatever you would expect based on `public/index.html` and `client/app.jsx` (e.g. Hello there! by default).
 * You can test
 * You can serve just public assets and our index.html command line with the command `http-server`.
+
+# To Do
+
+[] Get Express, Sequelize, and Authentication boilerplate finished
 
 # To Learn
 
