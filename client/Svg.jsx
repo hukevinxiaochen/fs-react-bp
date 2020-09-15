@@ -2,6 +2,10 @@ import React from 'react';
 import { geoAlbers, geoPath } from 'd3-geo';
 import chicagoRedliningMap from '../server/ILChicago1940';
 
+const divStyle = {
+  maxWidth: 500,
+};
+
 const svgStyle = {
   border: '2px solid gold',
 };
@@ -24,9 +28,11 @@ const Svg = () => {
     />
   ));
   return (
-    <svg width={w} height={h} style={svgStyle}>
-      {parts}
-    </svg>
+    <div style={divStyle}>
+      <svg viewBox="0 0 500 500" style={svgStyle}>
+        {parts}
+      </svg>
+    </div>
   );
 };
 
