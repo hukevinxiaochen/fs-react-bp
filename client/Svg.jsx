@@ -19,18 +19,18 @@ const Svg = () => {
     .translate([w / 2, h / 2])
     .scale(30000);
   const pathGenerator = geoPath().projection(projection);
-  const parts = chicagoRedliningMap.features.map((d, i) => (
+  const paths = chicagoRedliningMap.features.map((d, i) => (
     <path
       key={`path${i}`}
       d={pathGenerator(d)}
       stroke="#75739F"
-      strokeWidth={1}
+      strokeWidth={0.5}
     />
   ));
   return (
     <div style={divStyle}>
       <svg viewBox="0 0 500 500" style={svgStyle}>
-        {parts}
+        {paths}
       </svg>
     </div>
   );

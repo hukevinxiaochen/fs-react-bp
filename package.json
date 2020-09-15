@@ -8,9 +8,11 @@
     "deploy": "./deploy.sh",
     "start-dev": "webpack -w & yarn run start-static",
     "start-static": "http-server",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "mocha  ./tests/*.specs.js --watch --require @babel/register"
   },
   "devDependencies": {
+    "@babel/register": "^7.11.5",
     "chai": "^4.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.4",
