@@ -1,0 +1,33 @@
+import React from 'react';
+import { geoAlbers, geoPath } from 'd3-geo';
+import chicagoRedliningMap from '../server/ILChicago1940';
+
+const svgStyle = {
+  border: '2px solid gold',
+};
+
+const Svg = () => {
+  const w = 500;
+  const h = 500;
+  const projection = geoAlbers()
+    .center([0, 41.83])
+    .rotate([87.65, 0])
+    .translate([w / 2, h / 2])
+    .scale(30000);
+  const pathGenerator = geoPath().projection(projection);
+  const parts = chicagoRedliningMap.features.map((d, i) => (
+    <path
+      key={`path${i}`}
+      d={pathGenerator(d)}
+      stroke="#75739F"
+      strokeWidth={1}
+    />
+  ));
+  return (
+    <svg width={w} height={h} style={svgStyle}>
+      {parts}
+    </svg>
+  );
+};
+
+export default Svg;
