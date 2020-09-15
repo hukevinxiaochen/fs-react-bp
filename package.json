@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "d3-geo": "^2.0.1",
     "http-server": "^0.12.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
