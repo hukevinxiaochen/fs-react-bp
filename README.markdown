@@ -122,6 +122,12 @@ One can src client-side mocha test files.
 
 Use jsdom to create a mock browser-like environment and require it in the test script as a cli option to the mocha command.
 
+### Redux
+<https://redux.js.org/introduction/getting-started>
+
+### CSS
+
+Here's the recipe once you have css-loader and style-loader configured appropriately for webpack
 # Notes to Fullstack
 
 * boilermaker: 10. Testing: consider that enzyme has instructions that now have you use an adapter rather than have to worry about getting react-test-renderer or addons-test-utils on your own.
