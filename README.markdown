@@ -80,6 +80,42 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 ### babel
 [] how does babel work, what are presets? Why do we need them again?
 
+## Learning Notes
+
+### Testing
+
+Our testing is done using the mocha framework with chai assertion library. We will use the Expect style of assertions. We also choose to write our tests in a way that uses mocha's BDD style-interface, i.e. using describe to beging a test suite, and it for each unit test.
+
+[LogRocket Mocha and Chai Guide][mochaArticle]
+
+Further reading on style interfaces <https://mochajs.org/#interfaces>.
+
+#### Asynchronous code
+
+The it callback can take an optional callback function as its first argument. When this is passed Mocha knows that the test is for some async functionality. Conventionally named `done`.
+
+- done must be called for Mocha to terminate the test and proceed to the next test.
+- done should be called only once within an it() function
+- done is node-style, i.e. it can take an Error instance as first argument
+- done with an Error instance causes the test to fail with the given error
+
 # Notes to Fullstack
 
 * boilermaker: 10. Testing: consider that enzyme has instructions that now have you use an adapter rather than have to worry about getting react-test-renderer or addons-test-utils on your own.
+
+# Sources
+
+## Required
+
+TODO: Complete this list later
+
+[mochaArticle]: https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
+[mochaReact]: https://www.robinwieruch.de/react-testing-mocha-chai-enzyme-sinon
+[hooksReactRedux]: https://react-redux.js.org/api/hooks
+<https://blog.jakoblind.no/css-modules-webpack/>
+<https://devcenter.heroku.com/articles/config-vars>
+<https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps>
+<https://dzone.com/articles/what-you-should-know-about-node-env>
+<https://expressjs.com/en/advanced/best-practice-performance.html>
+
+## Optional
