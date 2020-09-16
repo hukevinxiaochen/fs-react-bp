@@ -125,9 +125,36 @@ Use jsdom to create a mock browser-like environment and require it in the test s
 ### Redux
 <https://redux.js.org/introduction/getting-started>
 
+Read and implement later
+
+<https://react-redux.js.org/api/hooks>
+<https://blog.isquaredsoftware.com/2019/07/blogged-answers-thoughts-on-hooks/>
+<https://blog.isquaredsoftware.com/2019/09/presentation-hooks-hocs-tradeoffs/>
+
 ### CSS
 
 Here's the recipe once you have css-loader and style-loader configured appropriately for webpack
+
+TODO: Fill this in
+
+If you have time, take a look at CSS modules
+<https://blog.jakoblind.no/css-modules-webpack/>
+
+### Environment variables
+
+#### NODE\_ENV
+
+DEVELOPMENT
+- more logs
+- no views are cached
+- more verbose error messages
+- front-end is not minified or cached
+
+PRODUCTION
+- middleware switch to most efficient code path
+- only packages in dependencies are installed - not dev-dependencise
+- express will cache view templates, have less verbose messages, css gets cached
+
 # Notes to Fullstack
 
 * boilermaker: 10. Testing: consider that enzyme has instructions that now have you use an adapter rather than have to worry about getting react-test-renderer or addons-test-utils on your own.
