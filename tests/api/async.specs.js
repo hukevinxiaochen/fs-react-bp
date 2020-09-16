@@ -1,8 +1,8 @@
 /* global describe context it */
 const { expect } = require('chai');
 
-const md5 = require('../md5');
-const promiseMd5 = require('../promise-md5');
+const md5 = require('../../md5');
+const promiseMd5 = require('../../promise-md5');
 
 // unclear why this is needed but it is related to the use of
 // @babel/register by our mocha test command
