@@ -4,7 +4,34 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 
 # Features
 
-* `.eslintrc.js` - using airbnb config.
+## REQUIRED by Fullstack
+
+### In Development
+* Tests should be written for all express, sequelize, and react/redux code units that we write.
+* Uses redux and react-redux to manage state
+  * has dev friendly `redux-logger` middleware too
+  * Folks can use either hooks or connect to access redux store in react components
+* Bundles CSS using webpack and with help of css-loader and style-loader
+* Use express as our API server
+  * Use logging middleware
+  * Use static file serving middleware
+  * Use parsing middleware
+  * Handle 404s
+  * Handle 500s
+  * Send index.html
+* Use sequelize and postgres together to persist and serve data to our application code
+* Have a way for users to authenticate
+  * Use some kind of session middleware
+  * Use a session store
+  * Use passport to help manage sessionsa
+  * They can login
+  * Sign up
+  * Log out
+  * Get "me", i.e. themselves
+  * OAuth is an option
+    * Our application should sign up for OAuth with Google somehow to get some secrets and client IDs
+
+### Completed
 * `public/index.html` - ready to load a `bundle.js` and mount a react application on `<div id="app"></div>`.
 * Uses react
 * Mobile friendly with usage of viewport meta tag.
@@ -16,6 +43,9 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 * starts in production with `start` script
 * can test the application by running `test` script
   * uses mocha and chai, with enzyme for react
+
+## REQUIRED by Me
+* `.eslintrc.js` - using airbnb config.
 
 ## Not actually boilerplate
 
