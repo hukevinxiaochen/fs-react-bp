@@ -99,6 +99,25 @@ The it callback can take an optional callback function as its first argument. Wh
 - done is node-style, i.e. it can take an Error instance as first argument
 - done with an Error instance causes the test to fail with the given error
 
+#### Test hooks
+
+- before() - once before the first test case in the block
+- beforeEach() - once before each test case
+- afterEach() - runs after each test case
+- after() - runs once after the last test case in the block
+
+each takes a callback function as argument.
+
+optional description as first argument to track errors. Named functions get their names used to describe the hook if nothing else supplied.
+
+*root level* hooks are defined outside the describe block and apply to all test files regardless of where they are defined.
+
+#### Mocha in the browser
+
+One can src client-side mocha test files.
+
+- create a test script called test:browser
+
 # Notes to Fullstack
 
 * boilermaker: 10. Testing: consider that enzyme has instructions that now have you use an adapter rather than have to worry about getting react-test-renderer or addons-test-utils on your own.
