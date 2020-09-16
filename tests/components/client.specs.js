@@ -1,5 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
+import sinon from 'sinon'; //spies and stubs
+
 // import Adapter
 import Adapter from 'enzyme-adapter-react-16';
 // import configure from Enzyme
@@ -18,8 +20,10 @@ configure({ adapter: new Adapter() });
 
 describe('D3 map tests', () => {
   it('should render a redlining map of Chicago', function () {
-    const wrapper = shallow(<Svg />);
-    const hasPathElements = wrapper.containsAnyMatchingElements([<path />]);
+    const shallowWrapper = shallow(<Svg />);
+    const hasPathElements = shallowWrapper.containsAnyMatchingElements([
+      <path />,
+    ]);
 
     expect(hasPathElements).to.equal(true);
   });
