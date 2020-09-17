@@ -19,7 +19,7 @@ To find out more about this, see http://airbnb.io/enzyme/docs/installation/index
 configure({ adapter: new Adapter() });
 
 describe('D3 map tests', () => {
-  it('should render a redlining map of Chicago', function () {
+  it('should render a redlining map of Chicago with <path> elements in our svg', function () {
     const shallowWrapper = shallow(<Map />);
     const hasPathElements = shallowWrapper.containsAnyMatchingElements([
       <path />,
