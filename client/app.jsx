@@ -2,12 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Svg from './Svg.jsx';
+import Map from './Map';
 
 ReactDOM.render(
   <>
     Hello there friend!
-    <Svg />
+    <Map />
   </>,
   document.getElementById('app'),
 );

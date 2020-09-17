@@ -10,7 +10,7 @@ const svgStyle = {
   border: '2px solid gold',
 };
 
-const Svg = () => {
+const Map = () => {
   const w = 500;
   const h = 500;
   const projection = geoAlbers()
@@ -36,4 +36,4 @@ const Svg = () => {
   );
 };
 
-export default Svg;
+export default Map;

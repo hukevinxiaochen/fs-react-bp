@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 // import configure from Enzyme
 import { configure, shallow } from 'enzyme';
 // import the component to be tested
-import Svg from '../../client/Svg';
+import Map from '../../client/Map';
 
 /* Enzyme expects an adapter to be configured
 To configure an adapter, you should call `Enzyme.configure({  adapter: new Adapter() })`
@@ -20,7 +20,7 @@ configure({ adapter: new Adapter() });
 
 describe('D3 map tests', () => {
   it('should render a redlining map of Chicago', function () {
-    const shallowWrapper = shallow(<Svg />);
+    const shallowWrapper = shallow(<Map />);
     const hasPathElements = shallowWrapper.containsAnyMatchingElements([
       <path />,
     ]);
