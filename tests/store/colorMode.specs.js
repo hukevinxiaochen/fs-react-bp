@@ -1,7 +1,10 @@
 import { expect } from 'chai';
+
+// import createStore for testing stateful components
+import { createStore } from 'redux';
 // import store from '../../client/state/store';
 // import reducer from '../../client/state/reducer';
-import { createStore } from 'redux';
+
 
 describe('Store', () => {
   it('is initialized with a colorMode slice', () => {
