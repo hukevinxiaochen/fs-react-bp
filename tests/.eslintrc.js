@@ -10,5 +10,12 @@ module.exports = {
         "varsIgnorePattern": "should|expect"
       }
     ]
-  }
+  },
+  "parserOptions": {
+    "ecmaVersion:" 6,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+    },
+  },
 }
