@@ -9,6 +9,7 @@
     "start-dev": "webpack -w & yarn run start-static",
     "start-static": "http-server",
     "build": "webpack",
+    "test-state": "mocha ./tests/store/*.specs.js --require @babel/register",
     "test-components": "mocha  ./tests/components/*.specs.js --watch --require @babel/register --require ./tests/dom.js",
     "test-api": "mocha ./tests/api/*.specs.js --watch"
   },
