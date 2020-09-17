@@ -1,7 +1,22 @@
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
 #app {
   background-color: #f9f5d7;
 }
 
-h1 {
-  font-family: 'Roboto', sans-serif;
+#app.dark-theme {
+  background-color: #282828;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  #app {
+    background-color: #282828;
+  }
+
+  #app.light-theme {
+    background-color: #f9f5d7;
+  }
 }
