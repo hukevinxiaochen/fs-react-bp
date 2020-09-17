@@ -7,10 +7,13 @@ const divStyle = {
 };
 
 const svgStyle = {
-  border: '2px solid gold',
+  border: '2px solid',
+  height: '50vh',
+  width: '80vw',
+  maxWidth: 500,
 };
 
-const Svg = () => {
+const Map = () => {
   const w = 500;
   const h = 500;
   const projection = geoAlbers()
@@ -20,15 +23,10 @@ const Svg = () => {
     .scale(30000);
   const pathGenerator = geoPath().projection(projection);
   const paths = chicagoRedliningMap.features.map((d, i) => (
-    <path
-      key={`path${i}`}
-      d={pathGenerator(d)}
-      stroke="#75739F"
-      strokeWidth={0.5}
-    />
+    <path key={`path${i}`} d={pathGenerator(d)} strokeWidth={0.5} />
   ));
   return (
-    <div style={divStyle}>
+    <div className="map" style={divStyle}>
       <svg viewBox="0 0 500 500" style={svgStyle}>
         {paths}
       </svg>
@@ -36,4 +34,4 @@ const Svg = () => {
   );
 };
 
-export default Svg;
+export default Map;
