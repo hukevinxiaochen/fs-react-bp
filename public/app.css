@@ -11,21 +11,25 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-#app {
+#main {
+  color: #282828;
   background-color: #f9f5d7;
 }
 
-#app.dark-theme {
+#main.dark-theme {
+  color: #fbf1c7;
   background-color: #282828;
 }
 
 @media (prefers-color-scheme: dark) {
   /* Dark theme styles go here */
-  #app {
+  #main {
+    color: #fbf1c7;
     background-color: #282828;
   }
 
-  #app.light-theme {
+  #main.light-theme {
+    color: #282828;
     background-color: #f9f5d7;
   }
 }
