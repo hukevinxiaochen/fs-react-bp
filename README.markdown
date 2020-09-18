@@ -1,3 +1,9 @@
+# Async Week Project
+
+## Not actually boilerplate
+
+* uses d3 to render some sample GeoJSON in the server folder
+
 # Before you start
 
 If you use `npm` just be sure to delete the yarn.lock file prior to running your first `npm install`.
@@ -46,10 +52,6 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 
 ## REQUIRED by Me
 * `.eslintrc.js` - using airbnb config.
-
-## Not actually boilerplate
-
-* uses d3 to render some sample GeoJSON in the server folder
 
 # Usage
 
