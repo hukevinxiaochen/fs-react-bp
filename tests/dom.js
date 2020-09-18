@@ -1,3 +1,4 @@
+/* pass this to a -r flag to tape when ready to use */
 import { JSDOM } from 'jsdom';
 
 const { window } = new JSDOM('<!doctype html><html><body></body></html>');

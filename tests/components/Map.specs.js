@@ -1,24 +1,19 @@
-import { expect } from 'chai';
+const test = require('tape'); // use tape JS
 import React from 'react';
+import { shallow, configure } from 'enzyme'; // enzyme to stub components
+import Adapter from 'enzyme-adapter-react-16'; // import Adapter
+configure({ adapter: new Adapter() }); // enzyme needs an adapter
+import Map from '../../client/Map'; // component
 
-import { shallow, configure } from 'enzyme';
-// import Adapter
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
-
-
-// import component
-import Map from '../../client/Map';
-
-
-describe('D3 map tests', () => {
-  it('should render a redlining map of Chicago with <path> elements in our svg', function () {
-    const shallowWrapper = shallow(<Map />);
-    const hasPathElements = shallowWrapper.containsAnyMatchingElements([
-      <path />,
-    ]);
-
-    expect(hasPathElements).to.equal(true);
-  });
+test('D3 map', (expect) => {
+  const shallowWrapper = shallow(<Map />);
+  const hasPathElements = shallowWrapper.containsAnyMatchingElements([
+    <path />,
+  ]);
+  expect.deepEqual(
+    hasPathElements,
+    true,
+    'renders an svg with path elements inside'
+  );
+  expect.end();
 });

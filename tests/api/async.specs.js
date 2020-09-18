@@ -1,5 +1,4 @@
-/* global describe context it */
-const { expect } = require('chai');
+const test = require('tape');
 
 const md5 = require('../md5');
 const promiseMd5 = require('../promise-md5');
@@ -11,42 +10,40 @@ const promiseMd5 = require('../promise-md5');
 const regeneratorRuntime = require('regenerator-runtime');
 
 // Tests async function md5 that expects a callback
-describe('#md5()', () => {
-  context('with string argument', () => {
-    it('should compute MD5 hash', (done) => {
-      md5('Kevin Hu', (err, hash) => {
-        if (err) return done(err);
-
-        expect(hash)
-          .to.be.a('string')
-          .that.matches(/^[a-f0-9]{32}$/);
-        done();
-      });
-    });
+test('#md5()', (expect) => {
+  md5('Kevin Hu', (err, hash) => {
+    expect.deepEqual(typeof hash, 'string', 'returns a string');
+    expect.deepEqual(
+      hash,
+      '91bd815fd220418e5e106bae4f78dc2b',
+      'computes the correct md5 hash value'
+    );
+    expect.end();
   });
 });
 
-// Tests async function promiseMd5 that is a Promise
-// Mocha knows to wait for a Promise to be fulfilled before proceeding.
-describe('#promiseMd5()', () => {
-  context('with string argument', () => {
-    it('should compute MD5 hash', () => {
-      return promiseMd5('Kevin Hu').then(function (hash) {
-        expect(hash)
-          .to.be.a('string')
-          .that.matches(/^[a-f0-9]{32}$/);
-      });
-    });
-  });
-});
-
-describe('#promiseMd5() async await style', () => {
-  context('with string argument using async await syntax', () => {
-    it('should compute MD5 hash', async () => {
-      const hash = await promiseMd5('Kevin Hu');
-      expect(hash)
-        .to.be.a('string')
-        .that.matches(/^[a-f0-9]{32}$/);
-    });
-  });
-});
+/* MOCHA style tests */
+// // Tests async function promiseMd5 that is a Promise
+// // Mocha knows to wait for a Promise to be fulfilled before proceeding.
+// describe('#promiseMd5()', () => {
+//   context('with string argument', () => {
+//     it('should compute MD5 hash', () => {
+//       return promiseMd5('Kevin Hu').then(function (hash) {
+//         expect(hash)
+//           .to.be.a('string')
+//           .that.matches(/^[a-f0-9]{32}$/);
+//       });
+//     });
+//   });
+// });
+//
+// describe('#promiseMd5() async await style', () => {
+//   context('with string argument using async await syntax', () => {
+//     it('should compute MD5 hash', async () => {
+//       const hash = await promiseMd5('Kevin Hu');
+//       expect(hash)
+//         .to.be.a('string')
+//         .that.matches(/^[a-f0-9]{32}$/);
+//     });
+//   });
+// });
