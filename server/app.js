@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // API routes
 app.get('/api/errors', (req, res, next) => {
   try {
-    console.log('The response body so far ->', res.body);
     throw new Error('we have done something wrong!');
   } catch (err) {
     next(err);
@@ -32,7 +31,6 @@ app.get('/', (req, res) => {
 
 // Handle 404s
 app.use((req, res) => {
-  console.log('This route should be hit if resource is not found');
   const resourceNotFound = 'The resource you requested could not be located.';
   res.status(404).send(resourceNotFound);
 });
@@ -40,7 +38,6 @@ app.use((req, res) => {
 // Handle 500 errors
 app.use((err, req, res, next) => {
   const extraContent = 'We got this error thing... ';
-  console.error(err);
   res
     .status(500)
     .send(`${extraContent}${err.message}` || 'Internal Server Error');
