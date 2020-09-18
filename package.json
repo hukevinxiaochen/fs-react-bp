@@ -7,7 +7,7 @@
     "start": "http-server -c-1",
     "deploy": "./deploy.sh",
     "start-dev": "webpack -w & yarn run start-static",
-    "start-static": "http-server",
+    "start-static": "nodemon server/index.js",
     "build": "webpack",
     "test": "tape -r @babel/register tests/**/*.specs.js | tap-spec",
     "test-dev": "tape-watch -r @babel/register tests/**/*.specs.js | tap-spec"
