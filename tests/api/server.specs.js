@@ -2,7 +2,6 @@ import { expect } from 'chai';
 const request = require('supertest');
 const app = require('../../server/app');
 
-
 describe('Express Server', () => {
   const server = request(app);
   context('GET /lasjdfkladj', () => {
@@ -22,9 +21,16 @@ describe('Express Server', () => {
   });
 
   context('GET /', () => {
-    it('serves your index.html', (done) => {
+    it('serves index.html', (done) => {
+      server.get('/').expect(200, done);
+    });
+  });
+
+  context('GET /api/errors', () => {
+    it('uses something other than Express default error handler', (done) => {
       server
-      .get('/').expect(200, done);
-    })
-  })
+        .get('/api/errors')
+        .expect(500, done);
+    });
+  });
 });
