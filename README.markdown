@@ -2,7 +2,7 @@
 
 ## Not actually boilerplate
 
-* uses d3 to render some sample GeoJSON in the server folder
+* uses d3 to render some sample GeoJSON in the server folder [deployed on heroku](kdata.herokuapp.com)
 
 # Before you start
 
