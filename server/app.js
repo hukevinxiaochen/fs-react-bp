@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -9,6 +10,10 @@ app.use(morgan('dev'));
 
 // Static file server
 app.use('/static', express.static(path.resolve(__dirname, '../public')));
+
+// use body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // API routes
 app.get('/api/errors', (req, res, next) => {
@@ -35,9 +40,7 @@ app.use((req, res) => {
 // Handle 500 errors
 app.use((err, req, res, next) => {
   const extraContent = 'We got this error thing... ';
-  console.log("We hit this error handling route");
   console.error(err);
-  console.error(err.stack);
   res
     .status(500)
     .send(`${extraContent}${err.message}` || 'Internal Server Error');
