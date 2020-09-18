@@ -14,6 +14,16 @@ babel is an abstract syntax tree parser and mapper that can take an AST to conve
 
 ### Testing
 
+tape gives us test, used to create new tests
+it takes an optional name string
+and requires a callback that fires with a new test object
+once all preceding tests have finished
+- convention calls this test object `t`
+- we use `expect` because it reads nicely.
+
+for simplicity's sake, we should restrict ourselves to using 
+deepEqual and pass and fail
+
 Our testing is done using the mocha framework with chai assertion library. We will use the Expect style of assertions. We also choose to write our tests in a way that uses mocha's BDD style-interface, i.e. using describe to beging a test suite, and it for each unit test.
 
 [LogRocket Mocha and Chai Guide][mochaArticle]
