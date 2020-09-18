@@ -170,10 +170,10 @@ TODO: Complete this list later
 [mochaArticle]: https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
 [mochaReact]: https://www.robinwieruch.de/react-testing-mocha-chai-enzyme-sinon
 [hooksReactRedux]: https://react-redux.js.org/api/hooks
-<https://blog.jakoblind.no/css-modules-webpack/>
-<https://devcenter.heroku.com/articles/config-vars>
-<https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps>
-<https://dzone.com/articles/what-you-should-know-about-node-env>
-<https://expressjs.com/en/advanced/best-practice-performance.html>
+[]: <https://blog.jakoblind.no/css-modules-webpack/>
+[]: <https://devcenter.heroku.com/articles/config-vars>
+[]: <https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps>
+[]: <https://dzone.com/articles/what-you-should-know-about-node-env>
+[]: <https://expressjs.com/en/advanced/best-practice-performance.html>
 
 ## Optional
