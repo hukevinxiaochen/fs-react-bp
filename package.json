@@ -9,8 +9,8 @@
     "start-dev": "webpack -w & yarn run start-static",
     "start-static": "http-server",
     "build": "webpack",
-    "test": "mocha  ./tests/**/* --require @babel/register --require ./tests/dom.js --recursive",
-    "test-dev": "mocha  ./tests/**/* --watch --require @babel/register --require ./tests/dom.js --recursive"
+    "test": "tape -r @babel/register tests/**/*.specs.js | tap-spec",
+    "test-dev": "tape-watch -r @babel/register tests/**/*.specs.js | tap-spec"
   },
   "devDependencies": {
     "@babel/register": "^7.11.5",
@@ -19,6 +19,7 @@
     "enzyme-adapter-react-16": "^1.15.4",
     "eslint": "7.2.0",
     "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-react": "^7.20.0",
@@ -29,7 +30,10 @@
     "nodemon": "^2.0.4",
     "regenerator-runtime": "^0.13.7",
     "sinon": "^9.0.3",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1",
+    "tape-watch": "^2.3.0"
   },
   "dependencies": {
     "@babel/core": "^7.11.6",
