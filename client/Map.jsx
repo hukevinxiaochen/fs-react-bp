@@ -30,6 +30,7 @@ const Map = () => {
   return (
     <div style={divStyle}>
       <svg viewBox="0 0 500 500" style={svgStyle}>
+        {paths}
       </svg>
     </div>
   );
