@@ -2,6 +2,26 @@
 
 If you use `npm` just be sure to delete the yarn.lock file prior to running your first `npm install`.
 
+# Workflow
+
+* `yarn test-dev`
+* Use feature branches.
+* Write failing tests before hacking on a new feature.
+* Commit when tests added.
+* Commit again when tests passed.
+
+## Using tape JS
+
+`var test = require('tape');`
+
+To skip tests `test.skip([name]. [opts], cb)` for further off specifications that have yet to be built out or fully thought through.
+
+The only real assertion you need to use is `t.deepEqual(actual, expected, msg)`.
+
+Maybe you'll need `t.throws(fn, expected, msg)`.
+
+For behaviors that require manual testing use `t.fail(msg)` and manually use `t.pass(msg)` when the test passes. Refactor into an automated test when possible.
+
 # Features
 
 ## REQUIRED by Fullstack
