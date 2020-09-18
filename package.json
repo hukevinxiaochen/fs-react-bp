@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "http-server",
     "deploy": "./deploy.sh",
     "start-dev": "webpack -w & yarn run start-static",
-    "start-static": "http-server",
+    "start-static": "http-server -c-1",
     "build": "webpack",
     "test-components": "mocha  ./tests/components/*.specs.js --watch --require @babel/register --require ./tests/dom.js",
     "test-api": "mocha ./tests/api/*.specs.js --watch"
