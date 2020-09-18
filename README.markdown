@@ -27,18 +27,11 @@ For behaviors that require manual testing use `t.fail(msg)` and manually use `t.
 ## REQUIRED by Fullstack
 
 ### In Development
+* Has API routes defined
 * Tests should be written for all express, sequelize, and react/redux code units that we write.
 * Uses redux and react-redux to manage state
   * has dev friendly `redux-logger` middleware too
   * Folks can use either hooks or connect to access redux store in react components
-* Bundles CSS using webpack and with help of css-loader and style-loader
-* Use express as our API server
-  * Use logging middleware
-  * Use static file serving middleware
-  * Use parsing middleware
-  * Handle 404s
-  * Handle 500s
-  * Send index.html
 * Use sequelize and postgres together to persist and serve data to our application code
 * Have a way for users to authenticate
   * Use some kind of session middleware
@@ -62,8 +55,15 @@ For behaviors that require manual testing use `t.fail(msg)` and manually use `t.
   * uses a deploy script that will deploy to the heroku dyno with `yarn/npm deploy`
 * starts in production with `start` script
 * can test the application by running `test` script
-  * uses mocha and chai, with enzyme for react
-
+  * uses tape JS, with enzyme for react, supertest for our API
+* Bundles CSS using webpack and with help of css-loader and style-loader
+* Use express as our API server
+  * Use logging middleware
+  * Use static file serving middleware
+  * Use parsing middleware
+  * Handle 404s
+  * Handle 500s
+  * Send index.html
 ## REQUIRED by Me
 * `.eslintrc.js` - using airbnb config.
 
