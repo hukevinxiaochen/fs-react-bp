@@ -1,8 +1,8 @@
-# Async Week Project
+:recycle: Refactor in progress
 
-## Not actually boilerplate
+This main branch cannot be trusted to work. It is the codebase currently deployed on <http://kdata.herokuapp.com>. But current work is on the test branch. As soon as we are caught up on our refactored branch, we'll merge everything back to the main.
 
-* uses d3 to render some sample GeoJSON in the server folder [deployed on heroku](kdata.herokuapp.com)
+`git checkout test` to see how we are going about this in a test-driven way.
 
 # Before you start
 
@@ -14,17 +14,6 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 
 ### In Development
 * Tests should be written for all express, sequelize, and react/redux code units that we write.
-* Uses redux and react-redux to manage state
-  * has dev friendly `redux-logger` middleware too
-  * Folks can use either hooks or connect to access redux store in react components
-* Bundles CSS using webpack and with help of css-loader and style-loader
-* Use express as our API server
-  * Use logging middleware
-  * Use static file serving middleware
-  * Use parsing middleware
-  * Handle 404s
-  * Handle 500s
-  * Send index.html
 * Use sequelize and postgres together to persist and serve data to our application code
 * Have a way for users to authenticate
   * Use some kind of session middleware
@@ -49,6 +38,17 @@ If you use `npm` just be sure to delete the yarn.lock file prior to running your
 * starts in production with `start` script
 * can test the application by running `test` script
   * uses mocha and chai, with enzyme for react
+* Uses redux and react-redux to manage state
+  * has dev friendly `redux-logger` middleware too
+  * Folks can use either hooks or connect to access redux store in react components
+* Bundles CSS using webpack and with help of css-loader and style-loader
+* Use express as our API server
+  * Use logging middleware
+  * Use static file serving middleware
+  * Use parsing middleware
+  * Handle 404s
+  * Handle 500s
+  * Send index.html
 
 ## REQUIRED by Me
 * `.eslintrc.js` - using airbnb config.
@@ -170,10 +170,15 @@ TODO: Complete this list later
 [mochaArticle]: https://blog.logrocket.com/a-quick-and-complete-guide-to-mocha-testing-d0e0ea09f09d/
 [mochaReact]: https://www.robinwieruch.de/react-testing-mocha-chai-enzyme-sinon
 [hooksReactRedux]: https://react-redux.js.org/api/hooks
-<https://blog.jakoblind.no/css-modules-webpack/>
-<https://devcenter.heroku.com/articles/config-vars>
-<https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps>
-<https://dzone.com/articles/what-you-should-know-about-node-env>
-<https://expressjs.com/en/advanced/best-practice-performance.html>
+[]: <https://blog.jakoblind.no/css-modules-webpack/>
+[]: <https://devcenter.heroku.com/articles/config-vars>
+[]: <https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps>
+[]: <https://dzone.com/articles/what-you-should-know-about-node-env>
+[]: <https://expressjs.com/en/advanced/best-practice-performance.html>
 
-## Optional
+# Async Week Project
+
+## Not actually boilerplate
+
+* uses d3 to render some sample GeoJSON in the server folder [deployed on heroku](kdata.herokuapp.com)
+
