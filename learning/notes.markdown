@@ -40,6 +40,12 @@ Our testing is done using the mocha framework with chai assertion library. We wi
 
 Further reading on style interfaces <https://mochajs.org/#interfaces>.
 
+To test our API we can use supertest with as-needed instances of an express app that uses only the routes we care about testing.
+
+In this way, we can separate the testing of the routes from the production context which contains references to the production database.
+
+In our test module we can include a reference to a test database sequelize model instead, and as long as the Model names match between our route definitions and our test Model object, then we're golden for being able to make assertions about our test database in the service of actually just trying to do a reasonable integration test of our API route with our server.
+
 #### Asynchronous code
 
 The it callback can take an optional callback function as its first argument. When this is passed Mocha knows that the test is for some async functionality. Conventionally named `done`.

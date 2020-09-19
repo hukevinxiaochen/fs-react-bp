@@ -27,8 +27,12 @@ For behaviors that require manual testing use `t.fail(msg)` and manually use `t.
 ## REQUIRED by Fullstack
 
 ### In Development
-* Has API routes defined
-* Tests should be written for all express, sequelize, and react/redux code units that we write.
+* Test writing
+  * Write tests that simply test that API routes exist.
+  * Create a seed file that can seed a database with hundreds of dummy records.
+  * Add integration tests that hit the real database.
+    * Before and after these tests, create and destroy dummy records.
+* Define models, schemas, and API routes to actually pass these tests.
 * Uses redux and react-redux to manage state
   * has dev friendly `redux-logger` middleware too
   * Folks can use either hooks or connect to access redux store in react components
