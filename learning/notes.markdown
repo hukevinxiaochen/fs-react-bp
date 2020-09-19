@@ -12,6 +12,16 @@ babel is an abstract syntax tree parser and mapper that can take an AST to conve
 
 ## Learning Notes
 
+### REST API
+
+- /resources
+  - GET - get a collection of them
+  - POST - make a new one
+- /resource/{id}
+  - GET - get one
+  - PUT - update one
+  - DELETE - delete one
+
 ### Testing
 
 tape gives us test, used to create new tests
